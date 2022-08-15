@@ -3,40 +3,54 @@
 #include <string.h>
 
 using namespace std;
+
+// Método para convertir la oración a  mayúsculas.
 void a_mayus(char oracion[])
 {
   int i;
-  cout << "\nTU ORACION EN MAYUSCULAS: ";
+  cout << "\nSu oración en mayúsculas es: ";
+  
   for (i = 0; i < strlen(oracion); i++)
   {
     putchar(toupper(oracion[i]));
   }
+
   cout << endl;
 }
+
+// Método para convertir la oración a minúsculas.
 void a_minus(char oracion[])
 {
   int i;
-  cout << "\ntu oracion en minusculas: ";
+  cout << "\nSu oración en minúsculas es: ";
+
   for (i = 0; i < strlen(oracion); i++)
   {
     putchar(tolower(oracion[i]));
   }
+
   cout << endl;
 }
+
+// Main
 int main()
 {
   int opcion;
   char frase[100];
+  
+  /* Do-while para mantener el programa corriendo hasta que el usuario  de un input de 3*/
   do
   {
     cout << "\n ACTIVIDAD 7 FORO DE TRABAJO \n" << endl;
-    cout << "Ingrese una oracion " << endl;
+    cout << "Por favor, ingrese una oración " << endl;
     cin.getline(frase, 100, '\n');
-    cout << "Seleccione la opción deseada: " << endl;
-    cout << "\n1. tu oración en minusculas " << endl;
-    cout << "2. TU ORACIÓN EN MAYÚSCULAS " << endl;
+    cout << "\n\nSeleccione la opción deseada: " << endl;
+    cout << "1. Mostrar la oración en munísculas. " << endl;
+    cout << "2. Mostrar la oración en mayúsculas. " << endl;
     cout << "3. Salir " << endl;
     cin >> opcion;
+    
+    // Switch para practicar en lugar de if - else.
     switch (opcion)
     {
     case 1:
@@ -48,7 +62,11 @@ int main()
     default:
       break;
     }
+
   } while (opcion != 3);
+  
+  // Pausa para esperar 
   system("pause");
+  
   return 0;
 }
