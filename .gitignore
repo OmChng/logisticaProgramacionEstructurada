@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# OS ignores
+.DS_Store
+
+# IDE ignores
+.vscode
