@@ -5,28 +5,28 @@
 using namespace std;
 
 // Método para convertir la oración a  mayúsculas.
-void a_mayus(char oracion[])
+void turnUpper(char string[])
 {
   int i;
   cout << "\nSu oración en mayúsculas es: ";
   
-  for (i = 0; i < strlen(oracion); i++)
+  for (i = 0; i < strlen(string); i++)
   {
-    putchar(toupper(oracion[i]));
+    putchar(toupper(string[i]));
   }
 
   cout << endl;
 }
 
 // Método para convertir la oración a minúsculas.
-void a_minus(char oracion[])
+void turnLower(char string[])
 {
   int i;
   cout << "\nSu oración en minúsculas es: ";
 
-  for (i = 0; i < strlen(oracion); i++)
+  for (i = 0; i < strlen(string); i++)
   {
-    putchar(tolower(oracion[i]));
+    putchar(tolower(string[i]));
   }
 
   cout << endl;
@@ -54,10 +54,10 @@ int main()
     switch (opcion)
     {
     case 1:
-      a_minus(frase);
+      turnLower(frase);
       break;
     case 2:
-      a_mayus(frase);
+      turnUpper(frase);
       break;
     default:
       break;
