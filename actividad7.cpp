@@ -34,7 +34,7 @@ int main()
     cin.getline(frase, 100, '\n');
     cout << "Seleccione la opción deseada: " << endl;
     cout << "\n1. tu oración en minusculas " << endl;
-    cout << "2. TU ORACIÓN EN MAYUSCULAS " << endl;
+    cout << "2. TU ORACIÓN EN MAYÚSCULAS " << endl;
     cout << "3. Salir " << endl;
     cin >> opcion;
     switch (opcion)
