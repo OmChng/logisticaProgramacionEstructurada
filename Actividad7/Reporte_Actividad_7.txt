@@ -1,0 +1,13 @@
+La solución al ejercicio propuesto para la actividad 7 fue la siguiente:
+  1.- Crear el método toUpper que se encargaría de ir convirtiendo uno por uno los caracteres de 
+  la oración a mayúsculas.
+  2.- Crear el método toLower que se encargaría de ir convirtiendo uno por uno los caracteres de 
+  la oración a minúsculas.
+  3.- En el main se colocó un cíclo [do-while] en el que se pide la opción del usuario en cuanto 
+  a qué le gustaría hacer con su oración, convertirla en mayúsculas o en minúsculas.
+    3.1.- Se agregó, además, una tercera opción que es la de salir del cíclo. Lo anterior con la 
+    intención de que el programa siguiera corriendo y se pudiera seguir cambiando oraciones a
+    mayúsculas o minúsculas hasta que el usuario decida salir del programa.
+    3.2.- La desición del [do-while] fue simplemente por el hecho de que el cíclo [do-while] corre
+    por lo menos una vez hasta que se cumpla cierto criterio mientras que un ciclo while sólo no 
+    cuenta con ésta característica.
