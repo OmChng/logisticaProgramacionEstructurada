@@ -1,0 +1,73 @@
+Pseudocódigo
+
+FUNCIÓN INMOVILIZAR_AUTO variable (tipo_de_auto)
+  SI tipo_de_auto = automático
+    Poner palanca en posición parking
+    Poner freno de mano
+  SI tipo_de_auto = estándar
+    Poner palanca en primera velocidad
+    Poner freno de mano
+  SI tipo_de_auto != estándar O tipo_de_auto != automático
+    ERROR no se conoce el tipo de auto
+FIN FUNCIÓN
+
+FUNCIÓN DESINMOVILIZAR_AUTO variable (tipo_de_auto)
+  SI tipo_de_auto = automático O estándar
+    Poner palanca en posición neutral
+    Quitar freno de mano
+  SI tipo_de_auto != estándar O tipo_de_auto != automático
+    ERROR no se conoce el tipo de auto
+FIN FUNCIÓN
+
+FUNCIÓN CAMBIAR_LLANTA 
+  Levantar auto usando gato
+  Quitar birlos de llanta
+  Quitar llanta ponchada
+  Colocar llanta de repuesto
+  Colocar birlos de llanta
+  Bajar el auto usando el gato
+FIN FUNCIÓN
+
+FUNCIÓN COMPRAR_HERRAMIENTAS variable (tener_tiempo_disponible)
+  SI tener_tiempo_disponible = verdadero
+    Ir a comprar herramientas
+    Regresar con herramientas
+  SI tener_tiempo_disponible = falso
+    SI urgencia_cambiar_llanta = verdadero
+      FUNCIÓN LLAMAR_A_MECÁNICO
+    SI urgencia_cambiar_llanta = falso
+      Esperar a tener_tiempo_disponible = verdadero
+      FUNCIÓN COMPRAR_HERRAMIENTAS
+FIN FUNCIÓN
+
+FUNCIÓN LLAMAR_A_MECÁNICO
+  Levantar teléfono
+  Digitar número de mecánico
+  Solicitar apoyo a mecánico
+  Dar dirección
+  Esperar a mecánico
+FIN FUNCIÓN
+
+MAIN
+variable tipo_de_auto
+variable tener_tiempo_disponible
+  SI Puedo hacer el cambio yo
+    SI Tengo las herramientas necesarias
+      Tener herramientas a la mano
+      Tener llanta de repuesto a la mano
+      SI El auto está inmovilizado
+        FUNCIÓN CAMBIAR_LLANTA
+        FUNCIÓN DESINMOVILIZAR_AUTO variable (tipo_de_auto)
+      SI NO Está inmovilizado el auto
+        FUNCIÓN INMOVILIZAR_AUTO variable (tipo_de_auto)
+        FUNCIÓN CAMBIAR_LLANTA
+        FUNCIÓN DESINMOVILIZAR_AUTO variable (tipo_de_auto)
+    SI NO Tengo las herramientas necesarias
+      SI Tengo dinero para comprar herramientas necesarias
+        FUNCIÓN COMPRAR_HERRAMIENTAS variable (tener_tiempo_disponible)
+      SI NO Tengo dinero para comprar herramientas necesarias
+        FUNCIÓN LLAMAR_A_MECÁNICO
+  SI NO Puedo hacer el cambio yo
+    FUNCIÓN LLAMAR_A_MECÁNICO
+FIN MAIN
+
